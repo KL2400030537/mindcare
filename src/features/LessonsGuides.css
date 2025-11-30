@@ -1,0 +1,94 @@
+.feature.lessons-guides {
+  background: linear-gradient(135deg, #c9d6ff, #e2e2e2); /* soft blue to grey gradient */
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 650px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.feature.lessons-guides h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b2d42;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.feature.lessons-guides ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.feature.lessons-guides li {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Link styling inside each lesson card */
+.feature.lessons-guides li a.lesson-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 4px;
+}
+
+/* Placeholder state when link hasn't been provided */
+.feature.lessons-guides li a.link-placeholder {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.feature.lessons-guides li a.link-placeholder .hint {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+.feature.lessons-guides li::before {
+  content: "📘"; /* book emoji */
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature.lessons-guides li:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.feature.lessons-guides li:hover::before {
+  content: "🌟"; /* glowing star emoji on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

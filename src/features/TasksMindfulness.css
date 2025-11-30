@@ -1,0 +1,76 @@
+.feature.tasks-mindfulness {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f); /* warm, soft gradient */
+  border-radius: 18px;
+  padding: 28px 24px;
+  margin: 20px auto;
+  max-width: 650px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.feature.tasks-mindfulness h4 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #3c2a21;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.feature.tasks-mindfulness ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature.tasks-mindfulness li {
+  background: #fff8f0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  color: #3c2a21;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature.tasks-mindfulness li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.feature.tasks-mindfulness input[type="checkbox"] {
+  accent-color: #ff7e5f; /* soft coral checkbox */
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.feature.tasks-mindfulness input[type="checkbox"]:checked {
+  transform: scale(1.2);
+}
+
+.feature.tasks-mindfulness label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

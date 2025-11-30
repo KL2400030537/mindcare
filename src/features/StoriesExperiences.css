@@ -1,0 +1,93 @@
+.feature.stories-experiences {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 28px;
+  margin: 25px auto;
+  max-width: 700px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.feature.stories-experiences h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.feature.stories-experiences h4::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.feature.stories-experiences ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.feature.stories-experiences li {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px 18px 48px; /* 👈 extra left padding for icon */
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  line-height: 1.5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.feature.stories-experiences li::before {
+  content: "✍️";
+  font-size: 1.2rem;
+  position: absolute;
+  left: 16px;  /* 👈 move icon left */
+  top: 50%;
+  transform: translateY(-50%); /* 👈 center vertically */
+}
+
+.feature.stories-experiences li:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #2c2c2c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature.stories-experiences li:hover::before {
+  content: "📖";
+}
+.story-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+  color: #2c3e50;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
